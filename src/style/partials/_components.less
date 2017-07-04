@@ -1,4 +1,37 @@
 .logo{
-	font-family: @logo_fonts;
-	font-size: 20px;
+	font-family: @logo_font;
+	font-size: 43px;
+	color: @theme_color1;
 }
+
+body>article,
+body>nav{
+	padding-left: 135px;
+	padding-right: 135px;
+}
+
+.header{
+    // padding-top: 30px;
+    .clearfix;
+    .flex-display();
+    .align-items;
+
+    &>*{
+    	float: left;
+    	width: 50%;
+    }
+}
+
+.meni_list{
+	.clearfix;
+}
+
+// .Rectangle_3 {
+//   background-color: rgb(255, 255, 255);
+//   position: absolute;
+//   left: -1px;
+//   top: -2px;
+  // width: 1444px;
+  // height: 102px;
+//   z-index: 141;
+// }
