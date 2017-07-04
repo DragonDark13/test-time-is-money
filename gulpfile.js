@@ -19,11 +19,6 @@ var gulp = require('gulp');
     pngquant = require('imagemin-pngquant'),
     reload = browserSync.reload;
 
-
-gulp.task('greet', function () {
-  console.log('Здравствуй, мир!');
-});
-
 gulp.task('webserver', function () {
     browserSync(config);
 });
