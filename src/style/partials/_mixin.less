@@ -104,3 +104,24 @@ box-sizing: @box-model;
 
     }
 }
+
+.absolute_block_pos(){
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+.margin_auto(){
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.circle(@diametr: 51px){
+    width: @diametr;
+    height: @diametr;
+    .borderRadius(50%);
+}

@@ -6,8 +6,8 @@
 
 body>article,
 body>nav{
-	padding-left: 135px;
-	padding-right: 135px;
+	padding-left: @page_padding;
+	padding-right: @page_padding;
 }
 
 .header{
@@ -35,3 +35,24 @@ body>nav{
   // height: 102px;
 //   z-index: 141;
 // }
+
+
+.banner {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.slider{
+	.base_effect_block();
+
+	.slider_nav{
+		.absolute_block_pos();
+		width: 100%;
+		top: 48%;
+		bottom: auto;
+		pointer-events: none;;
+		z-index: 9999;
+	}
+
+}
+
