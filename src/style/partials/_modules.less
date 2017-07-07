@@ -251,3 +251,78 @@ article>h3{
 		}
 	}
 }
+.soc_icons li{
+
+	float: left;
+	margin-right: 10px;
+
+	a{
+		display: block;
+		.circle(42px);
+		background-color: #3b5997;
+		text-align: center;
+		color: @color_white;
+	}
+
+	i{
+		font-size: 23px;
+	    line-height: 42px;
+	}
+
+	&:nth-child(2) a{
+		background-color: @theme_color1;
+	}
+
+	&:nth-child(3) a{
+		background-color: #e44c41;
+	}
+}
+
+	.contacts{
+
+		a{
+		font-size: 14px;
+		line-height: 24px;
+		font-family: "Myriad Pro Regular";
+		color: #bface2;
+		}
+	} 
+
+	.form{
+
+		.input_container{
+			.clearfix;
+			margin-bottom: 30px;
+		}
+
+		input{
+		min-width: 270px;
+		}
+
+		.name{
+			float: left;
+		}
+
+		.email{
+			float: right;
+		}
+
+		textarea{
+		width: 100%;
+		padding: 17px;
+		height: 180px;
+		}
+
+		button{
+			.borderRadius();
+			background-color: @theme_color1;
+			color: @color_white;
+			font-size: 22px;
+			display: block;
+			float: right;
+			border: none;
+			padding: 12px 61px;
+			line-height: 26px;
+		}
+
+	}
