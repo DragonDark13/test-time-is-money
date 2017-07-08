@@ -125,3 +125,38 @@ box-sizing: @box-model;
     height: @diametr;
     .borderRadius(50%);
 }
+
+.hidden_placeholder(){
+
+&:focus {
+
+    &::-webkit-input-placeholder {
+    .opacity (0);}
+
+    &::-moz-placeholder          {
+    .opacity (0);}
+
+    &:-moz-placeholder   {
+    .opacity (0);}
+
+    &:-ms-input-placeholder      {
+     .opacity (0);}
+
+  }
+}
+
+.btn_style(){
+    cursor: pointer;
+    .transition();
+    .borderRadius();
+}
+
+.placeholder( @color:#c1c1c1){
+
+  &[placeholder]{  color: @color;}
+  &::-webkit-input-placeholder { color:@color;}
+  &::-moz-placeholder       { color: @color;}
+  &:-moz-placeholder       { color: @color;}
+  &:-ms-input-placeholder  { color: @color;}
+
+  }

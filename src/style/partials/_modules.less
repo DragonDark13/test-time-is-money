@@ -41,7 +41,8 @@
 		display: block;
 		.transition;
 
-		&:hover{
+		&:hover,
+		&:focus{
 			color: @theme_color1;
 			background-color: #f8f9fb;
 		}
@@ -82,7 +83,6 @@
 
 	 
 	.slider_btn {
-		.borderRadius();
 		border: 3px  @color_white solid;
 		background-color: transparent;
 		width: 229px;
@@ -93,6 +93,12 @@
 		.margin_auto();
 		padding: 19px 10px;
 		margin-top: 60px;
+		.btn_style();
+
+		&:hover{
+			background-color: @color_white;
+			color: @theme_color1;
+		}
 	}
 
 }
@@ -107,6 +113,11 @@
 		background-repeat: no-repeat;
 		cursor: pointer;
 		pointer-events: auto;
+		.transition;
+
+		&:hover{
+			background-color:  fade( @color_black , 40%);
+		}
 	}
 
 
@@ -237,17 +248,21 @@ article>h3{
 		font-size: 17px;
 		font-weight: 600;
 		color: @color_white;
-		.borderRadius();
 		background-color: @btn_bg1;
 	    padding: 11px 50px;
-	    cursor: pointer;
+	    .btn_style();
+
 	}
 
 	.plan.active{
 
 		h4,
 		.buy_now{
-			background-color: #49cbcd;
+			background-color: @theme_color1;
+		}
+
+		.buy_now:hover{
+			background-color: @theme_color1 ;
 		}
 	}
 }
@@ -264,9 +279,16 @@ article>h3{
 		color: @color_white;
 	}
 
+	a:hover i{
+		.my_trasform(rotate(360deg));
+		color: @color_black;
+	}
+
 	i{
 		font-size: 23px;
 	    line-height: 42px;
+	    .transition(0.5s);
+	    display: block;
 	}
 
 	&:nth-child(2) a{
@@ -285,6 +307,10 @@ article>h3{
 		line-height: 24px;
 		font-family: "Myriad Pro Regular";
 		color: #bface2;
+		}
+
+		a:hover{
+			color: @theme_color1;
 		}
 	} 
 
@@ -314,7 +340,7 @@ article>h3{
 		}
 
 		button{
-			.borderRadius();
+			.btn_style();
 			background-color: @theme_color1;
 			color: @color_white;
 			font-size: 22px;
@@ -323,6 +349,10 @@ article>h3{
 			border: none;
 			padding: 12px 61px;
 			line-height: 26px;
+
+			&:hover{
+				background-color:  darken(@theme_color1, 15%);
+			}
 		}
 
 	}

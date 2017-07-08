@@ -67,12 +67,25 @@ textarea{
 	background-color: @color_white;
 	.borderRadius();
 	border: none;
-	color: #c1c1c1;
+	// color: #c1c1c1;
+	.placeholder;
     padding: 13px 23px;
     font-size: 16px;
     line-height: 26px;
+    .hidden_placeholder();
+
+    &:focus{
+    	box-shadow: none;
+    	outline: none;
+    	background-color:  lighten( @theme_color1, 30%);
+    	color: @text_color;
+    }
 }
 
 input{
 	height: 44px
+}
+
+textarea{
+	resize: none;
 }

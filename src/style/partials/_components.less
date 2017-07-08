@@ -16,10 +16,17 @@ body>article{
 }
 
 .header{
-    // padding-top: 30px;
     .clearfix;
     .flex-display();
     .align-items;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	position: sticky;
+	background-color: @color_white;
+	top: 0;
+	z-index: 9999;
 
     &>*{
     	float: left;
@@ -55,7 +62,7 @@ body>article{
 		top: 48%;
 		bottom: auto;
 		pointer-events: none;;
-		z-index: 9999;
+		z-index: 999;
 	}
 
 }
@@ -98,6 +105,7 @@ body>article{
 	background-position: center bottom;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 	.opacity(0.28);
 	z-index: 1;
 	}

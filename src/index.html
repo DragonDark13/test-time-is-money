@@ -28,9 +28,9 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Service</a></li>
         <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Team</a></li>
+        <li><a href="#team">Team</a></li>
         <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact_us">Contact</a></li>
     </ul>
 </div>
 
@@ -63,7 +63,7 @@
 =            Team            =
 ===========================-->
 
-<article class="team">
+<article class="team" id="team">
 
 <h3>The Team</h3>
 <div class="team_list">
@@ -120,7 +120,7 @@
             </div>
         </div>
        <div class="plan_container">
-            <div class="plan active">
+            <div class="plan">
                <h4>Pro</h4>
                <h6 class="price">$10.01/ Month</h6>
                <p>Lorem ipsum.</p>
@@ -159,7 +159,7 @@
 =            contact us            =
 =================================-->
 
-<article class="contact_us">
+<article class="contact_us" id="contact_us">
 
 <h3>Contact Us</h3>
 <div class="contact_container">
@@ -180,12 +180,11 @@
     <div class="form">
         <form action="">
             <div class="input_container">
-                <input type="text" name="name" class="name" placeholder="Name">
-                <input type="email" name="email" class="email" placeholder="Email" >
+                <input type="text" name="name" class="name" placeholder="Name" required="" maxlength="20">
+                <input type="email" name="email" class="email" placeholder="Email" required="" maxlength="15" >
             </div>
             <div class="input_container">
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Message ">
-                </textarea>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Message" required=""></textarea>
             </div>
             <div class="input_container">
                 <button type="submit">Send</button>
@@ -197,9 +196,6 @@
 </article>
 
 <!--====  End of contact us  ====-->
-
-
-
 
 </body>
 </html>
