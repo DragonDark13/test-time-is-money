@@ -72,6 +72,12 @@ box-sizing: @box-model;
           align-items: @align;
 }
 
+.justify-content(@justify: flex-start) {
+  -webkit-justify-content: @justify;
+      -ms-justify-content: @justify;
+          justify-content: @justify;
+}
+
 .base_effect_block(){
     position: relative;
     overflow: hidden;

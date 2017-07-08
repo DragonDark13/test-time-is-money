@@ -2,12 +2,13 @@
 	font-family: @logo_font;
 	font-size: 43px;
 	color: @theme_color1;
+	margin-top: -8px;
 }
 
 body>article,
 body>nav{
-	padding-left: @page_padding;
-	padding-right: @page_padding;
+	padding-left:  @page_padding_1;
+	padding-right: @page_padding_1;
 }
 
 body>article{
@@ -19,6 +20,7 @@ body>article{
     .clearfix;
     .flex-display();
     .align-items;
+    .flex-wrap();
 	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
@@ -26,7 +28,7 @@ body>article{
 	position: sticky;
 	background-color: @color_white;
 	top: 0;
-	z-index: 9999;
+	z-index: 9991;
 
     &>*{
     	float: left;
@@ -34,8 +36,17 @@ body>article{
     }
 }
 
+
+.meni_header{
+	display: none;
+}
+
 .meni_list{
 	.clearfix;
+	.flex-display();
+	.justify-content(flex-end);
+	.flex-wrap();
+	margin: 0 -21px;
 }
 
 // .Rectangle_3 {
@@ -148,3 +159,168 @@ body>article{
 	padding-left: 10px;
 }
 
+
+	@media (max-width: 1600px) {
+
+		body>article,
+		body>nav
+		{
+		padding-left: @page_padding_2;
+		padding-right: @page_padding_2;
+		}
+		
+	}
+
+	@media (max-width: 1430px) {
+
+		body>article{
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+
+		.team_list{
+			margin-top: 60px;
+		}
+
+		.contact_container{
+			padding-top: 50px;
+		}
+		
+	}
+
+	@media (max-width: 1240px) {
+
+		.logo{
+			width: 40%;
+		}
+
+		.meni_container{
+			width: 60%;
+		}
+		
+	}
+
+	@media (max-width: 1030px) {
+
+		body>article,
+		body>nav
+		{
+			padding-left: @page_padding_3;
+			padding-right: @page_padding_3;
+		}
+		
+	}
+
+	@media (max-width: 920px) {
+
+		.logo{
+			width: 25%;
+		}
+
+		.meni_container{
+			width: 75%;
+		}
+		
+	}
+
+	@media (max-width: 768px) {
+
+		body>article,
+		body>nav
+		{
+			padding-left: @page_padding_4;
+			padding-right: @page_padding_4;
+		}
+
+		.header{
+			display: block;
+			padding-top: 10px;
+		}
+
+		.logo{
+			width: 50%;
+		}
+
+		.meni_header{
+			display: block;
+			width: 50%;
+		}
+		
+		.meni_container{
+			display: none;
+			width: 100%;
+		}
+
+		.header.js_response_meni{
+		// position: absolute;
+		// min-height: 100%;
+
+				.meni_container{
+				display: block;
+				}
+
+				.meni_list{
+				margin: 0 -15px;
+				text-align: center;
+				display: block;
+				border-top: 1px @theme_color1 solid;
+				}
+		}
+
+		.main_container.js_response_hide{
+		position: fixed;
+		pointer-events: none;
+		}
+
+		.slider .slider_nav{
+			top: 41%;
+		}
+
+		.plans_list,
+		.team_list{
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.team_list{
+			margin-top: 0;
+		}
+
+		.plans{
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+
+		.contact_us{
+
+			p{
+				.margin_auto();
+			}
+
+			.contact_container{
+				padding-top: 25px;
+			}
+
+			.contact_container>*{
+				width: 100%;
+				float: none;
+				text-align: center;
+			}
+		}
+
+		.soc_icons{
+			text-align: center;
+		}
+
+		.contact{
+			padding-bottom: 40px;
+		}
+
+		article>h3{
+			text-indent: 0;
+		}
+
+		.form{
+			padding-left: 0;
+		}
+	}
