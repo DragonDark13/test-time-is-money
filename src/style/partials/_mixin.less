@@ -1,9 +1,9 @@
 .my_trasform(@transform){
--o-transform+_: @transform;
--ms-transform+_:@transform;
- -moz-transform+_: @transform; 
--webkit-transform+_: @transform ;
- transform+_: @transform ;  
+    -o-transform+_: @transform;
+    -ms-transform+_:@transform;
+     -moz-transform+_: @transform; 
+    -webkit-transform+_: @transform ;
+     transform+_: @transform ;  
 }
 
  .clearfix {
@@ -14,10 +14,10 @@
 }
 
 .box-sizing(@box-model) { 
--o-box-sizing:@box-model;
--webkit-box-sizing: @box-model; // Safari <= 5 
--moz-box-sizing: @box-model; // Firefox <= 19 
-box-sizing: @box-model; 
+    -o-box-sizing:@box-model;
+    -webkit-box-sizing: @box-model; // Safari <= 5 
+    -moz-box-sizing: @box-model; // Firefox <= 19 
+    box-sizing: @box-model; 
 }
 
 .opacity (@alpha) {
@@ -41,10 +41,10 @@ box-sizing: @box-model;
 
 
 .transition(@transition:0.3s){
--ms-transition:  @transition;
--webkit-transition:  @transition;
--moz-transition:  @transition;
- transition: @transition;
+    -ms-transition:  @transition;
+    -webkit-transition:  @transition;
+    -moz-transition:  @transition;
+     transition: @transition;
 }
 
 .box-shadow (@string) {
@@ -83,33 +83,6 @@ box-sizing: @box-model;
     overflow: hidden;
 }
 
-.row_set(@count: 4, @width_item: 23.1%){
-
-
-  @margin: (100% - ( @width_item * @count)) / (@count - 1 );
-  
-    width: @width_item ;
-    margin-left: @margin ;
-    margin-right: 0px;
-    display: block;
-    float: left;
-    box-sizing: border-box;
-
-     &:nth-child( @{count}n +1) {
-      margin-left: 0px;
-    }
-
-    [dir="rtl"]  &{
-      margin-left: 0px ;
-      margin-right:@margin;
-
-       &:nth-child( @{count}n +1) {
-        margin-right: 0px;
-
-       }
-
-    }
-}
 
 .absolute_block_pos(){
     position: absolute;
@@ -165,4 +138,4 @@ box-sizing: @box-model;
   &:-moz-placeholder       { color: @color;}
   &:-ms-input-placeholder  { color: @color;}
 
-  }
+}
